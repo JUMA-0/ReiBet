@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetMaster - Apostas Esportivas e Jogos Virtuais</title>
+    <!-- Link para o arquivo de estilos (opcional) -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos básicos inline para demonstração visual rápida */
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #121212; color: #fff; }
+        header { background: #1f1f1f; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #28a745; }
+        .logo { font-size: 24px; font-weight: bold; color: #28a745; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; }
+        nav a:hover { color: #28a745; }
+        .auth-buttons button { padding: 8px 15px; margin-left: 10px; cursor: pointer; border: none; font-weight: bold; border-radius: 4px; }
+        .btn-login { background: transparent; color: #fff; border: 1px solid #fff; }
+        .btn-register { background: #28a745; color: #fff; }
+        
+        .main-container { display: flex; min-height: 80vh; }
+        aside.sidebar { width: 250px; background: #181818; padding: 20px; border-right: 1px solid #333; }
+        aside.sidebar h3 { font-size: 16px; color: #aaa; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        aside.sidebar ul { list-style: none; padding: 0; }
+        aside.sidebar ul li { padding: 8px 0; cursor: pointer; }
+        aside.sidebar ul li:hover { color: #28a745; }
+
+        section.content { flex: 1; padding: 20px; }
+        .banner { background: linear-gradient(45deg, #28a745, #134f2c); padding: 40px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+        
+        .games-grid, .sports-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .game-card, .sport-card { background: #1f1f1f; border-radius: 8px; overflow: hidden; text-align: center; border: 1px solid #333; transition: transform 0.2s; }
+        .game-card:hover, .sport-card:hover { transform: translateY(-5px); border-color: #28a745; }
+        .game-thumb { height: 120px; background: #333; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #888; }
+        .game-info { padding: 15px; }
+        .game-info h4 { margin: 0 0 10px 0; }
+        .btn-play { background: #28a745; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+        footer { background: #0d0d0d; text-align: center; padding: 20px; font-size: 14px; color: #777; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">BetMaster</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="esportes.html">Esportes</a>
+            <a href="cassino.html">Cassino & Virtuais</a>
+            <a href="#promocoes">Promoções</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-login">Entrar</button>
+            <button class="btn-register">Cadastrar</button>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (LAYOUT DE 2 COLUNAS: MENU LATERAL + CONTEÚDO) -->
+    <div class="main-container">
+        
+        <!-- BARRA LATERAL (LIGAS DESPORTIVAS E MENU) -->
+        <aside class="sidebar">
+            <h3>Ligas Desportivas</h3>
+            <ul>
+                <li>⚽ Futebol (Todas as Ligas)</li>
+                <li>🏆 UEFA Champions League</li>
+                <li>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League (Inglaterra)</li>
+                <li>🇪🇸 La Liga (Espanha)</li>
+                <li>🇮🇹 Serie A (Itália)</li>
+                <li>🇧🇷 Brasileirão Série A</li>
+                <li>🏀 NBA (Basquete)</li>
+                <li>🎾 Tênis (ATP / WTA)</li>
+                <li>🎮 eSports (CS:GO, Dota 2, LoL)</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Jogos Virtuais</h3>
+            <ul>
+                <li>✈️ Aviator</li>
+                <li>📌 Plinko (Pin-up)</li>
+                <li>🎲 Jogos de Navegador</li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO DA PÁGINA -->
+        <section class="content">
+            
+            <!-- BANNER DE BOAS-VINDAS -->
+            <div class="banner">
+                <h1>Bônus de Boas-Vindas de até 100%</h1>
+                <p>Aposte nas suas ligas favoritas e divirta-se com os melhores jogos virtuais do mercado!</p>
+            </div>
+
+            <!-- SEÇÃO DE JOGOS VIRTUAIS SOLICITADOS -->
+            <h2>Jogos Virtuais em Destaque</h2>
+            <div class="games-grid">
+                
+                <!-- Jogo 1: Aviator -->
+                <div class="game-card">
+                    <div class="game-thumb" style="background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff;">✈️ AVIATOR</div>
+                    <div class="game-info">
+                        <h4>Aviator</h4>
+                        <button class="btn-play">Jogar Agora</button>
+                    </div>
+                </div>
+
+                <!-- Jogo 2: Plinko / Pin-Up style -->
+                <div class="game-card">
+                    <div class="game-thumb" style="background: linear-gradient(135deg, #8E2DE2, #4A00E0); color: #fff;">📌 PLINKO</div>
+                    <div class="game-info">
+                        <h4>Pin-Up Plinko</h4>
+                        <button class="btn-play">Jogar Agora</button>
+                    </div>
+                </div>
+
+                <!-- Jogo 3: Jogos de Navegador (Crash/Minas genérico) -->
+                <div class="game-card">
+                    <div class="game-thumb" style="background: linear-gradient(135deg, #f7b733, #fc4a1a); color: #fff;">💻 NAVEGADOR</div>
+                    <div class="game-info">
+                        <h4>Jogos Instantâneos</h4>
+                        <button class="btn-play">Jogar Agora</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SEÇÃO DE ESPORTES EM DESTAQUE -->
+            <h2 style="margin-top: 40px;">Ligas e Partidas Populares</h2>
+            <div class="sports-grid">
+                <div class="sport-card" style="padding: 15px;">
+                    <h4>Premier League</h4>
+                    <p>Manchester City x Arsenal</p>
+                    <button class="btn-play" style="width: 100%;">Ver Odds</button>
+                </div>
+                <div class="sport-card" style="padding: 15px;">
+                    <h4>La Liga</h4>
+                    <p>Real Madrid x Barcelona</p>
+                    <button class="btn-play" style="width: 100%;">Ver Odds</button>
+                </div>
+                <div class="sport-card" style="padding: 15px;">
+                    <h4>UEFA Champions League</h4>
+                    <p>Bayern x PSG</p>
+                    <button class="btn-play" style="width: 100%;">Ver Odds</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 BetMaster. Todos os direitos reservados. Jogue com responsabilidade. +18</p>
+    </footer>
+
+</body>
+</html>
+/site-de-apostas/
+│
+├── index.html          (Página Principal / Home)
+├── cassino.html        (Seção de Jogos e Cassino)
+├── esportes.html       (Ligas Desportivas)
+└── css/
+    └── style.css       (Estilização - Opcional)
